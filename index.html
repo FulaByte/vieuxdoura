@@ -3,88 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr Abdourahamane Diallo | Hommage & Héritage</title>
+    <title>Dr Abdourahamane Diallo | Héritage Ardent</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body class="bg-stone-50 text-stone-800 font-sans antialiased">
+    <style>
+        /* Ajout d'une police plus élégante pour les titres via Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;600;800&display=swap');
+        
+        .font-serif-bold { font-family: 'Playfair Display', serif; font-weight: 900; }
+        .font-sans-body { font-family: 'Inter', sans-serif; }
 
-    <!-- En-tête / Section Hero -->
-    <header class="bg-stone-900 text-stone-100 py-20 px-6 text-center border-b-4 border-amber-600">
-        <div class="max-w-3xl mx-auto">
-            <p class="text-amber-500 uppercase tracking-widest text-sm font-semibold mb-2">Hommage à</p>
-            <h1 class="text-4xl md:text-6xl font-serif font-bold mb-4">Dr Abdourahamane Diallo</h1>
-            <p class="text-xl md:text-2xl text-stone-300 font-light italic">Médecin, Homme d'État et Pionnier de la Première République de Guinée</p>
+        /* Effet de lueur subtil au survol des cartes */
+        .card-hover:hover {
+            box-shadow: 0 10px 30px -10px rgba(251, 191, 36, 0.3);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-emerald-950 text-slate-100 font-sans-body antialiased">
+
+    <!-- En-tête / Section Hero Dynamique -->
+    <!-- Utilisation d'un dégradé radial inspiré de l'aube sur la nature guinéenne -->
+    <header class="relative bg-gradient-to-br from-emerald-900 via-emerald-950 to-amber-950/50 py-24 px-6 text-center border-b-8 border-amber-500 overflow-hidden">
+        <!-- Élément décoratif en arrière-plan (cercle lumineux) -->
+        <div class="absolute -top-40 -right-40 w-80 h-80 bg-amber-400 rounded-full opacity-10 blur-3xl"></div>
+        <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-emerald-500 rounded-full opacity-10 blur-3xl"></div>
+
+        <div class="max-w-4xl mx-auto relative z-10">
+            <span class="inline-block bg-amber-500 text-emerald-950 uppercase tracking-widest text-xs font-extrabold mb-4 px-4 py-1.5 rounded-full shadow-lg">
+                Honneur & Mémoire
+            </span>
+            <h1 class="text-5xl md:text-7xl font-serif-bold tracking-tight mb-6 text-white leading-tight">
+                Dr Abdourahamane <span class="text-amber-400">Diallo</span>
+            </h1>
+            <p class="text-xl md:text-3xl text-slate-200 font-light max-w-2xl mx-auto leading-relaxed border-t-2 border-emerald-700 pt-6">
+                Médecin visionnaire, Bâtisseur de la nation, Pionnier de la souveraineté guinéenne.
+            </p>
         </div>
     </header>
 
     <!-- Contenu Principal -->
-    <main class="max-w-4xl mx-auto px-6 py-12 space-y-16">
+    <main class="max-w-6xl mx-auto px-6 py-16 md:py-24 space-y-24">
 
-        <!-- Introduction -->
-        <section class="prose max-w-none text-center">
-            <p class="text-xl leading-relaxed text-stone-600 max-w-2xl mx-auto">
-                Né à Dalein (Labé), le Dr Abdourahamane Diallo fut un pilier fondamental de l'indépendance de la Guinée. Brillant médecin et architecte de la première heure du PDG, il a dédié sa vie à la construction des infrastructures d'une nation souveraine.
-            </p>
+        <!-- Introduction : Carte "Portrait" moderne -->
+        <section class="bg-emerald-900 p-8 md:p-12 rounded-3xl shadow-2xl border border-emerald-800 flex flex-col md:flex-row items-center gap-10">
+            <!-- Emplacement pour image (ou icône par défaut si pas d'image) -->
+            <div class="w-40 h-40 md:w-56 md:h-56 rounded-full bg-emerald-800 border-4 border-amber-500 flex items-center justify-center flex-shrink-0 shadow-inner">
+                <svg class="w-20 h-20 text-amber-500/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+            </div>
+            <div class="prose prose-lg prose-invert max-w-none prose-p:leading-relaxed prose-p:text-slate-300">
+                <h2 class="text-3xl font-serif-bold text-white mb-6">Une Vie au Service de l'Indépendance</h2>
+                <p class="text-xl font-medium text-amber-300">Né à Dalein (Labé), le Dr Abdourahamane Diallo n'était pas seulement un homme de science, mais un architecte politique de la Guinée moderne.</p>
+                <p>Membre du cercle restreint fondateur du PDG, il a incarné la fusion nécessaire entre l'intellect médical et le courage militant pour relever le défi historique du référendum de 1958. Son dévouement a posé les fondations sanitaires et économiques d'une nation debout.</p>
+            </div>
         </section>
 
-        <hr class="border-stone-200">
-
-        <!-- Portefeuilles Ministériels -->
+        <!-- Portefeuilles : Cartes d'action vibrantes -->
         <section>
-            <h2 class="text-3xl font-serif font-bold text-center mb-8 text-stone-900">Engagement Politique & Service National</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-200">
-                    <span class="text-amber-600 font-bold text-lg">1958</span>
-                    <h3 class="font-bold text-xl mt-1 mb-2">Ministre de l'Économie Rurale</h3>
-                    <p class="text-stone-600 text-sm">Nommé au sein du tout premier cabinet de la Guinée indépendante après le vote historique du « Non » au référendum français.</p>
+            <h2 class="text-4xl font-serif-bold text-center mb-16 text-white leading-tight">
+                Les Piliers de son <span class="text-amber-400 border-b-4 border-amber-500">Action Ministérielle</span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Carte 1 -->
+                <div class="bg-emerald-900 p-8 rounded-3xl shadow-lg border border-emerald-800 transition-all duration-300 card-hover flex flex-col">
+                    <div class="text-5xl mb-6 text-amber-400 font-black">1958</div>
+                    <h3 class="text-2xl font-extrabold text-white mb-4 flex-grow">Ministre de l'Économie Rurale</h3>
+                    <div class="w-16 h-1 bg-amber-500 mb-6 rounded"></div>
+                    <p class="text-slate-300 text-base leading-relaxed">Au lendemain du « Non » historique, il relève le défi immense de structurer l'autosuffisance alimentaire et l'agriculture d'un pays soudainement souverain.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-200">
-                    <span class="text-amber-600 font-bold text-lg">1963</span>
-                    <h3 class="font-bold text-xl mt-1 mb-2">Ministre de la Santé</h3>
-                    <p class="text-stone-600 text-sm">Il met son expertise médicale au service du pays pour structurer et nationaliser le système de santé publique naissant.</p>
+                <!-- Carte 2 -->
+                <div class="bg-emerald-900 p-8 rounded-3xl shadow-lg border border-emerald-800 transition-all duration-300 card-hover flex flex-col">
+                    <div class="text-5xl mb-6 text-emerald-400 font-black">1963</div>
+                    <h3 class="text-2xl font-extrabold text-white mb-4 flex-grow">Ministre de la Santé Publique</h3>
+                    <div class="w-16 h-1 bg-emerald-500 mb-6 rounded"></div>
+                    <p class="text-slate-300 text-base leading-relaxed">Retour à sa vocation première. Il conçoit le premier système de santé nationalisé, formant les cadres guinéens et étendant les soins aux régions les plus reculées.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-200">
-                    <span class="text-amber-600 font-bold text-lg">1968</span>
-                    <h3 class="font-bold text-xl mt-1 mb-2">Secrétaire d'État</h3>
-                    <p class="text-stone-600 text-sm">Nommé Secrétaire d'État sans portefeuille, il demeure un conseiller stratégique hautement respecté au sein du cercle restreint.</p>
+                <!-- Carte 3 -->
+                <div class="bg-emerald-900 p-8 rounded-3xl shadow-lg border border-emerald-800 transition-all duration-300 card-hover flex flex-col">
+                    <div class="text-5xl mb-6 text-rose-500 font-black">1968</div>
+                    <h3 class="text-2xl font-extrabold text-white mb-4 flex-grow">Secrétaire d'État</h3>
+                    <div class="w-16 h-1 bg-amber-500 mb-6 rounded"></div>
+                    <p class="text-slate-300 text-base leading-relaxed">Sage parmi les sages, nommé Secrétaire d'État sans portefeuille, il met son expérience au service de la présidence pour la coordination stratégique de l'État.</p>
                 </div>
             </div>
         </section>
 
-        <hr class="border-stone-200">
-
-        <!-- Frise Chronologique -->
-        <section>
-            <h2 class="text-3xl font-serif font-bold text-center mb-8 text-stone-900">Parcours Historique</h2>
-            <div class="space-y-8 relative before:absolute before:inset-0 before:left-4 md:before:left-1/2 before:w-0.5 before:bg-stone-200">
+        <!-- Frise Chronologique : Design moderne et coloré -->
+        <section class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-serif-bold text-center mb-16 text-white">Ligne de Vie <span class="text-emerald-400">&</span> Historique</h2>
+            <div class="relative pl-8 md:pl-0">
+                <!-- Ligne verticale centrale (visible sur desktop) -->
+                <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-amber-500 via-emerald-500 to-amber-500 transform md:-translate-x-1/2 rounded-full"></div>
                 
-                <!-- Événement 1 -->
-                <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between md:odd:flex-row-reverse group">
-                    <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-amber-600 -translate-x-2 border-4 border-stone-50"></div>
-                    <div class="pl-12 md:pl-0 md:w-5/12 bg-white p-6 rounded-lg shadow-xs border border-stone-100">
-                        <span class="font-bold text-amber-600">Février 1955</span>
-                        <h4 class="font-bold text-lg mt-1">Les Fondations du Combat</h4>
-                        <p class="text-stone-600 text-sm mt-1">Il devient l'un des cinq membres exclusifs du bureau politique national du PDG (Parti Démocratique de Guinée) aux côtés d'Ahmed Sékou Touré.</p>
+                <!-- Événement 1 (Gauche) -->
+                <div class="relative mb-12 md:w-1/2 md:pr-12 md:text-right group">
+                    <div class="absolute left-0 md:-left-2 md:right-0 top-1.5 w-6 h-6 bg-amber-500 rounded-full transform md:translate-x-1/2 flex items-center justify-center z-10 shadow-lg group-hover:scale-125 transition-transform">
+                        <div class="w-3 h-3 bg-emerald-950 rounded-full"></div>
+                    </div>
+                    <div class="ml-10 md:ml-0 bg-emerald-900 p-6 rounded-2xl shadow-xl border border-emerald-800 group-hover:border-amber-500/50 transition-colors">
+                        <span class="block text-sm font-bold text-amber-400 mb-1">Février 1955</span>
+                        <h4 class="text-xl font-extrabold text-white mb-2">Architecte du Parti</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">Consécration politique : il intègre le Bureau Politique National du PDG-RDA. L'un des 5 hommes clés pour préparer l'indépendance.</p>
                     </div>
                 </div>
 
-                <!-- Événement 2 -->
-                <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between md:odd:flex-row-reverse group">
-                    <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-amber-600 -translate-x-2 border-4 border-stone-50"></div>
-                    <div class="pl-12 md:pl-0 md:w-5/12 bg-white p-6 rounded-lg shadow-xs border border-stone-100">
-                        <span class="font-bold text-amber-600">Octobre 1958</span>
-                        <h4 class="font-bold text-lg mt-1">L'Aube de la Souveraineté</h4>
-                        <p class="text-stone-600 text-sm mt-1">La Guinée proclame son indépendance. Le Dr Diallo s'impose comme un technocrate indispensable pour combler le vide administratif laissé par le départ des colons.</p>
+                <!-- Événement 2 (Droite) -->
+                <div class="relative mb-12 md:w-1/2 md:ml-auto md:pl-12 group">
+                    <div class="absolute left-0 md:-right-2 md:left-0 top-1.5 w-6 h-6 bg-emerald-500 rounded-full transform md:-translate-x-1/2 flex items-center justify-center z-10 shadow-lg group-hover:scale-125 transition-transform">
+                        <div class="w-3 h-3 bg-emerald-950 rounded-full"></div>
+                    </div>
+                    <div class="ml-10 md:ml-0 bg-emerald-900 p-6 rounded-2xl shadow-xl border border-emerald-800 group-hover:border-emerald-500/50 transition-colors">
+                        <span class="block text-sm font-bold text-emerald-400 mb-1">Sept-Oct 1958</span>
+                        <h4 class="text-xl font-extrabold text-white mb-2">Le Tournant Historique</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">La Guinée dit "NON". Le Dr Diallo mobilise le Fouta-Djallon pour le vote massif en faveur de la souveraineté immédiate.</p>
                     </div>
                 </div>
 
-                <!-- Événement 3 -->
-                <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between md:odd:flex-row-reverse group">
-                    <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-amber-600 -translate-x-2 border-4 border-stone-50"></div>
-                    <div class="pl-12 md:pl-0 md:w-5/12 bg-white p-6 rounded-lg shadow-xs border border-stone-100">
-                        <span class="font-bold text-amber-600">Années 1960</span>
-                        <h4 class="font-bold text-lg mt-1">Décentralisation de l'État</h4>
-                        <p class="text-stone-600 text-sm mt-1">Il assume la fonction de ministre délégué pour la région de Kankan, participant activement à l'organisation territoriale du pays.</p>
+                <!-- Événement 3 (Gauche) -->
+                <div class="relative md:w-1/2 md:pr-12 md:text-right group">
+                    <div class="absolute left-0 md:-left-2 md:right-0 top-1.5 w-6 h-6 bg-amber-500 rounded-full transform md:translate-x-1/2 flex items-center justify-center z-10 shadow-lg group-hover:scale-125 transition-transform">
+                        <div class="w-3 h-3 bg-emerald-950 rounded-full"></div>
+                    </div>
+                    <div class="ml-10 md:ml-0 bg-emerald-900 p-6 rounded-2xl shadow-xl border border-emerald-800 group-hover:border-amber-500/50 transition-colors">
+                        <span class="block text-sm font-bold text-amber-400 mb-1">Années 1960</span>
+                        <h4 class="text-xl font-extrabold text-white mb-2">Organisation Territoriale</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">Sert la nation en tant que Ministre Délégué pour la région de Kankan, consolidant l'unité nationale et l'administration décentralisée.</p>
                     </div>
                 </div>
 
@@ -93,9 +135,14 @@
 
     </main>
 
-    <!-- Pied de page -->
-    <footer class="bg-stone-900 text-stone-400 py-8 text-center text-sm mt-20 border-t border-stone-800">
-        <p>&copy; 2026 Initiative pour la Préservation des Archives Historiques de Guinée. Développé en mémoire du Dr Abdourahamane Diallo.</p>
+    <!-- Pied de page : Sómbre et élégant -->
+    <footer class="bg-black py-12 px-6 mt-24 border-t-4 border-emerald-800 text-center">
+        <div class="max-w-4xl mx-auto space-y-4">
+            <p class="text-amber-400 font-serif-bold text-xl">Dr Abdourahamane Diallo</p>
+            <p class="text-slate-500 text-sm leading-relaxed max-w-md mx-auto">
+                Un flambeau pour les générations futures. Site maintenu par l'Initiative pour la Préservation des Archives Historiques de Guinée. &copy; 2026.
+            </p>
+        </div>
     </footer>
 
 </body>
