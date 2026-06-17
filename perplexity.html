@@ -1,1 +1,829 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abdourahmane Dalein Diallo | Official Biography</title>
+  <meta name="description" content="Official-style biography of Abdourahmane Dalein Diallo, physician, minister, and national figure of Guinea.">
+  <meta name="theme-color" content="#0b1220">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#eef2f7;
+      --surface:#ffffff;
+      --surface-2:#f7f9fc;
+      --text:#15202b;
+      --muted:#617086;
+      --deep:#0b1220;
+      --deep-2:#121d30;
+      --red:#ce1126;
+      --yellow:#fcd116;
+      --green:#009460;
+      --gold:#d9b45f;
+      --shadow:0 18px 50px rgba(11,18,32,.12);
+      --shadow-2:0 12px 28px rgba(11,18,32,.08);
+      --radius:24px;
+      --border:rgba(17,24,39,.10);
+      --max:1160px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      line-height:1.7;
+      background:
+        radial-gradient(circle at top right, rgba(217,180,95,.10), transparent 22%),
+        radial-gradient(circle at top left, rgba(206,17,38,.08), transparent 24%),
+        linear-gradient(180deg,#f8fafc 0%,var(--bg) 100%);
+    }
+    a{color:inherit;text-decoration:none}
+    a:focus,button:focus{outline:3px solid rgba(252,209,22,.42);outline-offset:3px}
+    .container{width:min(var(--max),calc(100% - 2rem));margin:0 auto}
 
+    .topline{
+      height:10px;
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr;
+    }
+    .topline span:nth-child(1){background:var(--red)}
+    .topline span:nth-child(2){background:var(--yellow)}
+    .topline span:nth-child(3){background:var(--green)}
+
+    .hero{
+      background:
+        linear-gradient(135deg, rgba(11,18,32,.98) 0%, rgba(18,29,48,.97) 55%, rgba(22,40,66,.96) 100%);
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+      box-shadow:inset 0 -1px 0 rgba(255,255,255,.08);
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-8% -15% auto auto;
+      width:560px;height:560px;border-radius:50%;
+      background:radial-gradient(circle, rgba(217,180,95,.20), rgba(217,180,95,0) 64%);
+      pointer-events:none;
+    }
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:auto auto -20% -10%;
+      width:420px;height:420px;border-radius:50%;
+      background:radial-gradient(circle, rgba(0,148,96,.14), rgba(0,148,96,0) 66%);
+      pointer-events:none;
+    }
+
+    .hero-inner{
+      position:relative;
+      z-index:1;
+      padding:1.1rem 0 2rem;
+    }
+    .masthead{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:1rem;
+      padding:.25rem 0 1rem;
+    }
+    .emblem{
+      display:flex;
+      align-items:center;
+      gap:.7rem;
+    }
+    .emblem-mark{
+      width:46px;
+      height:46px;
+      border-radius:14px;
+      background:linear-gradient(135deg, rgba(255,255,255,.16), rgba(255,255,255,.05));
+      border:1px solid rgba(255,255,255,.15);
+      display:grid;
+      place-items:center;
+      box-shadow:0 12px 24px rgba(0,0,0,.12);
+    }
+    .emblem-mark::before{
+      content:"";
+      width:18px;
+      height:18px;
+      border-radius:50%;
+      background:linear-gradient(135deg,var(--red),var(--yellow),var(--green));
+      box-shadow:0 0 0 6px rgba(255,255,255,.08);
+    }
+    .emblem-text{
+      display:flex;
+      flex-direction:column;
+      gap:.15rem;
+    }
+    .emblem-text strong{
+      font-size:.98rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .emblem-text span{
+      font-size:.85rem;
+      color:rgba(255,255,255,.70);
+    }
+
+    .lang-switch{
+      display:inline-flex;
+      gap:.35rem;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.10);
+      padding:.35rem;
+      border-radius:999px;
+      backdrop-filter:blur(10px);
+    }
+    .lang-btn{
+      border:0;
+      background:transparent;
+      color:#fff;
+      padding:.7rem 1rem;
+      border-radius:999px;
+      font-weight:800;
+      cursor:pointer;
+      letter-spacing:.02em;
+    }
+    .lang-btn.active{
+      background:#fff;
+      color:var(--deep);
+      box-shadow:0 8px 16px rgba(0,0,0,.12);
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.35fr .92fr;
+      gap:1.5rem;
+      align-items:stretch;
+      margin-top:1rem;
+    }
+    .hero-copy{
+      padding:2rem 0 1rem;
+      max-width:720px;
+    }
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:.55rem;
+      margin:0 0 .95rem;
+      padding:.48rem .8rem;
+      border-radius:999px;
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.10);
+      color:#f1f5f9;
+      font-size:.78rem;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+    }
+    .eyebrow::before{
+      content:"";
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:var(--gold);
+      box-shadow:0 0 0 5px rgba(217,180,95,.18);
+    }
+    h1{
+      margin:.1rem 0 .9rem;
+      font-size:clamp(3rem,6.4vw,5.5rem);
+      line-height:.96;
+      letter-spacing:-.04em;
+    }
+    .lead{
+      margin:0;
+      max-width:58ch;
+      font-size:1.13rem;
+      color:rgba(255,255,255,.92);
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.75rem;
+      margin-top:1.6rem;
+    }
+    .hero-pill{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:.88rem 1.15rem;
+      border-radius:999px;
+      font-weight:800;
+      box-shadow:var(--shadow-2);
+      transition:transform .18s ease;
+    }
+    .hero-pill:hover{transform:translateY(-1px)}
+    .hero-pill.primary{
+      background:linear-gradient(135deg,#fff 0%, #f4f7fb 100%);
+      color:var(--deep);
+    }
+    .hero-pill.secondary{
+      background:transparent;
+      color:#fff;
+      border:1px solid rgba(255,255,255,.16);
+      box-shadow:none;
+    }
+
+    .profile-card{
+      background:rgba(255,255,255,.96);
+      color:var(--text);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      border:1px solid rgba(255,255,255,.24);
+      overflow:hidden;
+    }
+    .profile-head{
+      padding:1.2rem 1.2rem .9rem;
+      border-bottom:1px solid var(--border);
+      background:linear-gradient(180deg,#fff 0%, #fbfcfe 100%);
+    }
+    .profile-title{
+      margin:0;
+      font-size:.78rem;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+    .portrait-wrap{
+      padding:1.3rem 1.2rem 0;
+      display:grid;
+      place-items:center;
+    }
+    .portrait{
+      width:178px;
+      aspect-ratio:1;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      position:relative;
+      background:linear-gradient(135deg, rgba(206,17,38,.16), rgba(252,209,22,.20) 52%, rgba(0,148,96,.16));
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.7);
+    }
+    .portrait::before{
+      content:"";
+      position:absolute;
+      inset:14px;
+      border-radius:50%;
+      background:linear-gradient(180deg,#ffffff,#eaf0f8);
+      border:1px solid #dde6ef;
+    }
+    .portrait-initials{
+      position:relative;
+      z-index:1;
+      font-size:3rem;
+      font-weight:900;
+      letter-spacing:.08em;
+      color:var(--deep);
+    }
+    .portrait-caption{
+      margin:0;
+      padding:1rem 1.2rem 1.2rem;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    .facts{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:.75rem;
+      padding:0 1.2rem 1.2rem;
+    }
+    .fact{
+      background:var(--surface-2);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:.95rem 1rem;
+      box-shadow:0 8px 18px rgba(11,18,32,.04);
+    }
+    .fact span{
+      display:block;
+      color:var(--muted);
+      font-size:.88rem;
+      margin-bottom:.15rem;
+    }
+    .fact strong{
+      display:block;
+      font-size:1rem;
+      color:var(--text);
+    }
+
+    .nav-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.65rem;
+      margin-top:1.25rem;
+      padding-top:1rem;
+      border-top:1px solid rgba(255,255,255,.12);
+    }
+    .nav-row a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:.75rem 1rem;
+      border-radius:999px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.10);
+      color:#fff;
+      font-weight:700;
+    }
+    .nav-row a:hover{background:rgba(255,255,255,.14)}
+
+    .main-content{padding:1.8rem 0 2.6rem}
+    .section{
+      background:rgba(255,255,255,.94);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow-2);
+      overflow:hidden;
+      margin:1.25rem 0;
+    }
+    .section::before{
+      content:"";
+      display:block;
+      height:6px;
+      background:linear-gradient(90deg,var(--red),var(--yellow),var(--green));
+    }
+    .section-inner{padding:1.55rem}
+    .section h2{
+      margin:0 0 .75rem;
+      font-size:1.55rem;
+      letter-spacing:-.02em;
+      color:var(--deep);
+    }
+    .section p{margin:.8rem 0 0}
+    .section-grid{
+      display:grid;
+      grid-template-columns:1.4fr .86fr;
+      gap:1.25rem;
+      align-items:start;
+    }
+
+    .side-note{
+      background:linear-gradient(180deg,#fcfdff 0%, #f6f9fc 100%);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:1.15rem;
+    }
+    .side-note h3{
+      margin:.05rem 0 .8rem;
+      font-size:1rem;
+      color:var(--deep);
+    }
+    .side-note ul{
+      margin:0;
+      padding-left:1.1rem;
+    }
+    .side-note li{margin:.45rem 0}
+
+    .timeline{
+      display:grid;
+      gap:1rem;
+      margin-top:.5rem;
+      position:relative;
+    }
+    .timeline::before{
+      content:"";
+      position:absolute;
+      left:15px;
+      top:.25rem;
+      bottom:.25rem;
+      width:2px;
+      background:linear-gradient(180deg,var(--red),var(--gold),var(--green));
+      opacity:.55;
+    }
+    .timeline-item{
+      position:relative;
+      padding-left:3.2rem;
+    }
+    .timeline-item::before{
+      content:"";
+      position:absolute;
+      left:8px;
+      top:.4rem;
+      width:16px;
+      height:16px;
+      border-radius:50%;
+      background:var(--deep);
+      border:4px solid #fff;
+      box-shadow:0 0 0 2px rgba(11,18,32,.12);
+    }
+    .timeline-card{
+      background:linear-gradient(180deg,#ffffff 0%, #fbfcfe 100%);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:1rem 1rem 1rem 1.1rem;
+      box-shadow:0 10px 20px rgba(11,18,32,.05);
+    }
+    .timeline-card strong{
+      display:block;
+      font-size:.82rem;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:var(--red);
+      margin-bottom:.35rem;
+    }
+    .timeline-card h3{
+      margin:.05rem 0 .35rem;
+      font-size:1.05rem;
+      color:var(--deep);
+    }
+    .timeline-card p{
+      margin:0;
+      color:var(--text);
+    }
+
+    .closing{
+      background:
+        linear-gradient(135deg, rgba(11,18,32,.99), rgba(18,29,48,.98)),
+        var(--deep);
+      color:#fff;
+    }
+    .closing .section-inner{padding:1.7rem}
+    .closing p{color:rgba(255,255,255,.90)}
+    .closing::before{
+      background:linear-gradient(90deg,var(--gold),rgba(255,255,255,.45),var(--gold));
+    }
+
+    .footer{
+      padding:1rem 0 2rem;
+      color:var(--muted);
+      text-align:center;
+    }
+    .footer-inner{
+      border-top:1px solid var(--border);
+      padding-top:1rem;
+      display:flex;
+      justify-content:space-between;
+      gap:1rem;
+      flex-wrap:wrap;
+    }
+    .footer-credit a{
+      color:inherit;
+      text-decoration:underline;
+      text-underline-offset:2px;
+    }
+
+    @media (max-width: 920px){
+      .hero-grid,.section-grid{grid-template-columns:1fr}
+      .hero-copy{padding-top:1rem}
+      .masthead{align-items:flex-start;flex-direction:column}
+      .nav-row a{width:calc(50% - .33rem)}
+    }
+    @media (max-width: 560px){
+      .container{width:min(var(--max),calc(100% - 1rem))}
+      .section-inner{padding:1.2rem}
+      .nav-row a,.lang-switch{width:100%}
+      .lang-btn{flex:1}
+      .profile-card .portrait{width:158px}
+      .footer-inner{
+        justify-content:center;
+        text-align:center;
+        flex-direction:column;
+        align-items:center;
+      }
+      .timeline::before{left:13px}
+      .timeline-item{padding-left:2.8rem}
+      .timeline-item::before{left:6px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topline" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="masthead">
+        <div class="emblem" aria-hidden="true">
+          <div class="emblem-mark"></div>
+          <div class="emblem-text">
+            <strong id="brandTitle">Official Biography</strong>
+            <span id="brandSub">Republic of Guinea Tribute Page</span>
+          </div>
+        </div>
+
+        <div class="lang-switch" aria-label="Language switcher">
+          <button class="lang-btn active" type="button" data-lang="en">English</button>
+          <button class="lang-btn" type="button" data-lang="fr">Français</button>
+        </div>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" id="eyebrow">A Guinean life of service and nation-building</p>
+          <h1 id="title">Abdourahmane Dalein Diallo</h1>
+          <p class="lead" id="lead">A physician, political figure, and early government minister whose service helped shape the founding years of modern Guinea.</p>
+
+          <div class="hero-actions">
+            <a href="#biography" class="hero-pill primary" id="heroPill1">Read biography</a>
+            <a href="#legacy" class="hero-pill secondary" id="heroPill2">View legacy</a>
+          </div>
+        </div>
+
+        <aside class="profile-card">
+          <div class="profile-head">
+            <p class="profile-title" id="profileTitle">National Profile</p>
+          </div>
+
+          <div class="portrait-wrap">
+            <div class="portrait" aria-hidden="true">
+              <div class="portrait-initials">ADD</div>
+            </div>
+          </div>
+
+          <p class="portrait-caption" id="portraitCaption">Born in Dalein and remembered for leadership, service, and dignity in the early history of independent Guinea.</p>
+
+          <div class="facts">
+            <div class="fact">
+              <span id="bornLabel">Born</span>
+              <strong id="bornValue">Dalein, Labé, Guinea</strong>
+            </div>
+            <div class="fact">
+              <span id="professionLabel">Profession</span>
+              <strong id="professionValue">Doctor</strong>
+            </div>
+            <div class="fact">
+              <span id="roleLabel">Political role</span>
+              <strong id="roleValue">Minister of Cooperation</strong>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <nav class="nav-row" aria-label="Biography sections">
+        <a href="#biography" id="navBio">Biography</a>
+        <a href="#career" id="navCareer">Career Timeline</a>
+        <a href="#family" id="navFamily">Family</a>
+        <a href="#legacy" id="navLegacy">Legacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section id="biography" class="section">
+      <div class="section-inner section-grid">
+        <div>
+          <h2 id="bioHeading">Biography</h2>
+          <p id="bioP1">Abdourahmane Dalein Diallo was born in 1895 in Dalein, Labé, in the Fouta Djallon highlands of French Guinea. He belonged to the Fula people, also known as Fulani, Fulbe, or Peul, whose history and identity are deeply rooted in the region.</p>
+          <p id="bioP2">His life began in a place known for faith, learning, and dignity. The Fouta Djallon was the heartland of Fula civilization in West Africa, and Labé stood as an important cultural and religious center in that landscape.</p>
+          <p id="bioP3">Diallo grew up during a period of colonial transformation, yet remained shaped by the traditions of his community and the educational values that defined the region.</p>
+        </div>
+
+        <aside class="side-note">
+          <h3 id="bioSideTitle">Historical context</h3>
+          <ul>
+            <li id="bioSide1">Fouta Djallon highlands.</li>
+            <li id="bioSide2">French Guinea era.</li>
+            <li id="bioSide3">Fula cultural heritage.</li>
+            <li id="bioSide4">Tradition of faith and learning.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="career" class="section">
+      <div class="section-inner">
+        <h2 id="careerHeading">Career Timeline</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-card">
+              <strong>Février 1955</strong>
+              <h3 id="t1Title">Architect of the Party</h3>
+              <p id="t1Body">Political consecration: he joined the National Political Bureau of the PDG-RDA, one of the five key men preparing independence.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-card">
+              <strong>Sept.-Oct. 1958</strong>
+              <h3 id="t2Title">Historic Turning Point</h3>
+              <p id="t2Body">He mobilized Fouta Djallon for the historic “Non” and the vote for immediate sovereignty as Guinea chose independence.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-card">
+              <strong>1958</strong>
+              <h3 id="t3Title">Minister of Rural Economy</h3>
+              <p id="t3Body">He took on the challenge of food self-sufficiency and agricultural organization in a suddenly sovereign country.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-card">
+              <strong>Années 1960</strong>
+              <h3 id="t4Title">Territorial Organization</h3>
+              <p id="t4Body">He served the nation as a ministerial delegate for the Kankan region, strengthening national unity and decentralized administration.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-card">
+              <strong>1963</strong>
+              <h3 id="t5Title">Minister of Public Health</h3>
+              <p id="t5Body">He returned to his medical vocation and helped design the first nationalized health system, training Guinean cadres and extending care to remote regions.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-card">
+              <strong>1968</strong>
+              <h3 id="t6Title">Secretary of State</h3>
+              <p id="t6Body">Named Secretary of State without portfolio, he served the presidency with strategic coordination and seasoned state experience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="family" class="section">
+      <div class="section-inner section-grid">
+        <div>
+          <h2 id="familyHeading">Family</h2>
+          <p id="familyP1">Diallo was married to Assiatou Diallo, also known as Hadja Assi, who came from Koubia in the Labé Region. Their shared roots in the Fouta Djallon tied them to the same cultural and spiritual world.</p>
+          <p id="familyP2">Although they did not have biological children, they built a life marked by faith, love, and care for others. Their home reflected the values of community and responsibility that shaped their generation.</p>
+        </div>
+
+        <aside class="side-note">
+          <h3 id="familySideTitle">Personal note</h3>
+          <ul>
+            <li id="familySide1">Spouse: Assiatou Diallo.</li>
+            <li id="familySide2">Also known as Hadja Assi.</li>
+            <li id="familySide3">Origin: Koubia, Labé Region.</li>
+            <li id="familySide4">A life of faith and companionship.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="legacy" class="section closing">
+      <div class="section-inner">
+        <h2 id="legacyHeading">Legacy</h2>
+        <p id="legacyP1">Abdourahmane Dalein Diallo belongs to the generation that carried Guinea from colonial rule into national independence. He was a doctor, a public servant, a minister, and a man rooted in the highlands of the Fouta Djallon.</p>
+        <p id="legacyP2">His story is one of leadership without noise, guidance without vanity, and service at a moment when the nation needed stability, credibility, and vision.</p>
+        <p id="legacyP3">This site honors him as a well-deserved national figure whose life helped shape the foundation of modern Guinea.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p id="footer1">Abdourahmane Dalein Diallo official biography site.</p>
+      <p class="footer-credit" id="footer2">Designed and built by <a href="https://fulabyte.com/" target="_blank" rel="noopener noreferrer">FulaByte</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        brandTitle: "Official Biography",
+        brandSub: "Republic of Guinea Tribute Page",
+        eyebrow: "A Guinean life of service and nation-building",
+        title: "Abdourahmane Dalein Diallo",
+        lead: "A physician, political figure, and early government minister whose service helped shape the founding years of modern Guinea.",
+        heroPill1: "Read biography",
+        heroPill2: "View legacy",
+        profileTitle: "National Profile",
+        portraitCaption: "Born in Dalein and remembered for leadership, service, and dignity in the early history of independent Guinea.",
+        bornLabel: "Born",
+        bornValue: "Dalein, Labé, Guinea",
+        professionLabel: "Profession",
+        professionValue: "Doctor",
+        roleLabel: "Political role",
+        roleValue: "Minister of Cooperation",
+        navBio: "Biography",
+        navCareer: "Career Timeline",
+        navFamily: "Family",
+        navLegacy: "Legacy",
+        bioHeading: "Biography",
+        bioP1: "Abdourahmane Dalein Diallo was born in 1895 in Dalein, Labé, in the Fouta Djallon highlands of French Guinea. He belonged to the Fula people, also known as Fulani, Fulbe, or Peul, whose history and identity are deeply rooted in the region.",
+        bioP2: "His life began in a place known for faith, learning, and dignity. The Fouta Djallon was the heartland of Fula civilization in West Africa, and Labé stood as an important cultural and religious center in that landscape.",
+        bioP3: "Diallo grew up during a period of colonial transformation, yet remained shaped by the traditions of his community and the educational values that defined the region.",
+        bioSideTitle: "Historical context",
+        bioSide1: "Fouta Djallon highlands.",
+        bioSide2: "French Guinea era.",
+        bioSide3: "Fula cultural heritage.",
+        bioSide4: "Tradition of faith and learning.",
+        careerHeading: "Career Timeline",
+        t1Title: "Architect of the Party",
+        t1Body: "Political consecration: he joined the National Political Bureau of the PDG-RDA, one of the five key men preparing independence.",
+        t2Title: "Historic Turning Point",
+        t2Body: "He mobilized Fouta Djallon for the historic “Non” and the vote for immediate sovereignty as Guinea chose independence.",
+        t3Title: "Minister of Rural Economy",
+        t3Body: "He took on the challenge of food self-sufficiency and agricultural organization in a suddenly sovereign country.",
+        t4Title: "Territorial Organization",
+        t4Body: "He served the nation as a ministerial delegate for the Kankan region, strengthening national unity and decentralized administration.",
+        t5Title: "Minister of Public Health",
+        t5Body: "He returned to his medical vocation and helped design the first nationalized health system, training Guinean cadres and extending care to remote regions.",
+        t6Title: "Secretary of State",
+        t6Body: "Named Secretary of State without portfolio, he served the presidency with strategic coordination and seasoned state experience.",
+        familyHeading: "Family",
+        familyP1: "Diallo was married to Assiatou Diallo, also known as Hadja Assi, who came from Koubia in the Labé Region. Their shared roots in the Fouta Djallon tied them to the same cultural and spiritual world.",
+        familyP2: "Although they did not have biological children, they built a life marked by faith, love, and care for others. Their home reflected the values of community and responsibility that shaped their generation.",
+        familySideTitle: "Personal note",
+        familySide1: "Spouse: Assiatou Diallo.",
+        familySide2: "Also known as Hadja Assi.",
+        familySide3: "Origin: Koubia, Labé Region.",
+        familySide4: "A life of faith and companionship.",
+        legacyHeading: "Legacy",
+        legacyP1: "Abdourahmane Dalein Diallo belongs to the generation that carried Guinea from colonial rule into national independence. He was a doctor, a public servant, a minister, and a man rooted in the highlands of the Fouta Djallon.",
+        legacyP2: "His story is one of leadership without noise, guidance without vanity, and service at a moment when the nation needed stability, credibility, and vision.",
+        legacyP3: "This site honors him as a well-deserved national figure whose life helped shape the foundation of modern Guinea.",
+        footer1: "Abdourahmane Dalein Diallo official biography site.",
+        footer2: "Designed and built by FulaByte."
+      },
+      fr: {
+        brandTitle: "Biographie officielle",
+        brandSub: "Page d'hommage à la République de Guinée",
+        eyebrow: "Une vie guinéenne de service et de construction nationale",
+        title: "Abdourahmane Dalein Diallo",
+        lead: "Médecin, personnalité politique et premier ministre dont le service a contribué aux années fondatrices de la Guinée moderne.",
+        heroPill1: "Lire la biographie",
+        heroPill2: "Voir l’héritage",
+        profileTitle: "Profil national",
+        portraitCaption: "Né à Dalein, il est rappelé pour son leadership, son service et sa dignité dans les débuts de la Guinée indépendante.",
+        bornLabel: "Naissance",
+        bornValue: "Dalein, Labé, Guinée",
+        professionLabel: "Profession",
+        professionValue: "Médecin",
+        roleLabel: "Rôle politique",
+        roleValue: "Ministre de la Coopération",
+        navBio: "Biographie",
+        navCareer: "Chronologie de carrière",
+        navFamily: "Famille",
+        navLegacy: "Héritage",
+        bioHeading: "Biographie",
+        bioP1: "Abdourahmane Dalein Diallo est né en 1895 à Dalein, Labé, dans les hautes terres du Fouta Djallon, en Guinée française. Il appartenait au peuple fula, aussi connu sous les noms de Fulani, Fulbe ou Peul, dont l’histoire et l’identité sont profondément enracinées dans la région.",
+        bioP2: "Sa vie a commencé dans un lieu reconnu pour la foi, le savoir et la dignité. Le Fouta Djallon était le cœur de la civilisation peule en Afrique de l’Ouest, et Labé y occupait une place culturelle et religieuse majeure.",
+        bioP3: "Diallo a grandi pendant une période de transformation coloniale, tout en restant marqué par les traditions de sa communauté et les valeurs éducatives de la région.",
+        bioSideTitle: "Contexte historique",
+        bioSide1: "Hautes terres du Fouta Djallon.",
+        bioSide2: "Époque de la Guinée française.",
+        bioSide3: "Héritage culturel peul.",
+        bioSide4: "Tradition de foi et de savoir.",
+        careerHeading: "Chronologie de carrière",
+        t1Title: "Architecte du Parti",
+        t1Body: "Consécration politique : il intègre le Bureau Politique National du PDG-RDA, l’un des cinq hommes clés pour préparer l’indépendance.",
+        t2Title: "Tournant historique",
+        t2Body: "Il mobilise le Fouta Djallon pour le vote massif du « Non » et pour la souveraineté immédiate de la Guinée.",
+        t3Title: "Ministre de l’Économie Rurale",
+        t3Body: "Au lendemain du « Non » historique, il relève le défi immense de structurer l’autosuffisance alimentaire et l’agriculture d’un pays soudainement souverain.",
+        t4Title: "Organisation territoriale",
+        t4Body: "Il sert la nation en tant que Ministre Délégué pour la région de Kankan, consolidant l’unité nationale et l’administration décentralisée.",
+        t5Title: "Ministre de la Santé Publique",
+        t5Body: "Retour à sa vocation première. Il conçoit le premier système de santé nationalisé, formant les cadres guinéens et étendant les soins aux régions les plus reculées.",
+        t6Title: "Secrétaire d’État",
+        t6Body: "Sage parmi les sages, nommé Secrétaire d’État sans portefeuille, il met son expérience au service de la présidence pour la coordination stratégique de l’État.",
+        familyHeading: "Famille",
+        familyP1: "Diallo était marié à Assiatou Diallo, également connue sous le nom de Hadja Assi, originaire de Koubia dans la région de Labé. Leurs racines communes dans le Fouta Djallon les reliaient au même univers culturel et spirituel.",
+        familyP2: "Bien qu’ils n’aient pas eu d’enfants biologiques, ils ont construit une vie marquée par la foi, l’amour et le soin porté aux autres. Leur foyer reflétait les valeurs de communauté et de responsabilité qui ont façonné leur génération.",
+        familySideTitle: "Note personnelle",
+        familySide1: "Épouse : Assiatou Diallo.",
+        familySide2: "Aussi connue comme Hadja Assi.",
+        familySide3: "Origine : Koubia, région de Labé.",
+        familySide4: "Une vie de foi et de compagnie.",
+        legacyHeading: "Héritage",
+        legacyP1: "Abdourahmane Dalein Diallo appartient à la génération qui a fait passer la Guinée de la domination coloniale à l’indépendance nationale. Il fut médecin, serviteur de l’État, ministre et homme enraciné dans les hautes terres du Fouta Djallon.",
+        legacyP2: "Son histoire est celle d’un leadership sans bruit, d’un guidage sans vanité, et d’un service rendu à un moment où la nation avait besoin de stabilité, de crédibilité et de vision.",
+        legacyP3: "Ce site l’honore comme une figure nationale bien méritée dont la vie a contribué à façonner les fondations de la Guinée moderne.",
+        footer1: "Site biographique officiel d’Abdourahmane Dalein Diallo.",
+        footer2: "Conçu et réalisé par FulaByte."
+      }
+    };
+
+    const ids = [
+      "brandTitle","brandSub","eyebrow","title","lead","heroPill1","heroPill2","profileTitle","portraitCaption",
+      "bornLabel","bornValue","professionLabel","professionValue","roleLabel","roleValue","navBio","navCareer",
+      "navFamily","navLegacy","bioHeading","bioP1","bioP2","bioP3","bioSideTitle","bioSide1","bioSide2","bioSide3","bioSide4",
+      "careerHeading","t1Title","t1Body","t2Title","t2Body","t3Title","t3Body","t4Title","t4Body","t5Title","t5Body","t6Title","t6Body",
+      "familyHeading","familyP1","familyP2","familySideTitle","familySide1","familySide2","familySide3","familySide4",
+      "legacyHeading","legacyP1","legacyP2","legacyP3","footer1","footer2"
+    ];
+
+    function applyLanguage(lang){
+      document.documentElement.lang = lang;
+      document.documentElement.setAttribute("data-lang", lang);
+      ids.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el && translations[lang][id]) el.textContent = translations[lang][id];
+      });
+      document.querySelectorAll(".lang-btn").forEach((btn) => {
+        const active = btn.dataset.lang === lang;
+        btn.classList.toggle("active", active);
+        btn.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+      localStorage.setItem("diallo-lang", lang);
+    }
+
+    document.querySelectorAll(".lang-btn").forEach((btn) => {
+      btn.addEventListener("click", () => applyLanguage(btn.dataset.lang));
+    });
+
+    applyLanguage(localStorage.getItem("diallo-lang") === "fr" ? "fr" : "en");
+  </script>
+</body>
+</html>
